@@ -1,21 +1,16 @@
 package com.airalo.tests;
 
 import com.airalo.base.BaseTest;
-import com.airalo.pages.HomePage;
-import com.airalo.pages.japan.JapanPackages;
 import org.junit.jupiter.api.Test;
-
-import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
 
 public class AiraloJapanSimTest extends BaseTest {
 
     @Test
-    public void openWebsite() {
+    public void japanSimValuesTest() {
         driver.get("https://www.airalo.com/");
         homePage.searchLocalRegions("Japan");
-        //japanPackages = PageFactory.initElements(driver, JapanPackages.class);
         japanPackages.selectNumberPackage(0);
         Assert.assertEquals(japanPackages.getSimTitle().getText(), "Moshi Moshi");
         Assert.assertEquals(japanPackages.getSimCoverageValue().getText(), "Japan");
