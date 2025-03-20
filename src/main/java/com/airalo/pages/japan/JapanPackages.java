@@ -1,4 +1,4 @@
-package com.airalo.japan;
+package com.airalo.pages.japan;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindAll;
